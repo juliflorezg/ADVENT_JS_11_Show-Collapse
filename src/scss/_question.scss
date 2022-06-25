@@ -1,0 +1,71 @@
+
+.question {
+  --background-url: url('../assets/chevron.svg');
+
+  background: white;
+  border: 5px solid black;
+  padding: 25px 38px;
+  width: calc(100% - 55px);
+  display: block;
+  position: relative;
+  padding-left: 130px;
+  box-sizing: border-box;
+  color: black;
+}
+
+.question:before {
+  content: '';
+  display: block;
+  background: black;
+  width: 102px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.question-mark {
+  position: absolute;
+  left: 10px;
+  z-index: 5;
+  top: -45px;
+}
+
+.question:after {
+  content: '';
+  background: #f0f0f0 var(--background-url) calc(100% - 12px) 20px no-repeat;
+  width: calc(100%);
+  position: absolute;
+  right: -55px;
+  top: 15px;
+  height: calc(100% + 15px);
+  z-index: -1;
+}
+
+.expand .question:after,
+a:hover .question:after {
+  background-color: #ffdd00;
+}
+
+.question .content {
+  position: relative;
+  z-index: 3;
+}
+
+.answer {
+  background-color: #ffdd00;
+  width: calc(100% - 60px);
+  padding: 15px;
+  margin-left: 55px;
+  box-sizing: border-box;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+
+.answer.show {
+  opacity: 1;
+  height: calc((16px) * 6 + 40px);
+}
