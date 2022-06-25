@@ -1,3 +1,0 @@
-- what I learned:
-  - showing elements based on height
-  - changing background using CSS properties and changing them with JS
